@@ -8,7 +8,32 @@ function hover(params) {
 }
 
 function leaved() {
-	document.querySelector("#square1").style.background = "#E6E6FA";
-	document.querySelector("#square2").style.background = "#E6E6FA";
-	document.querySelector("#square3").style.background = "#E6E6FA";
+	const elements = document.querySelectorAll(".square");
+	elements.forEach(ele => ele.style.background = "#E6E6FA");
 }
+
+document.querySelector("#square1").addEventListener("mouseover", function() {
+    hover(1);
+});
+
+document.querySelector("#square2").addEventListener("mouseover", function() {
+    hover(2);
+});
+
+document.querySelector("#square3").addEventListener("mouseover", function() {
+    hover(3);
+});
+
+
+document.querySelector("#square1").addEventListener("mouseleave", function() {
+    leaved();
+});
+
+document.querySelector("#square2").addEventListener("mouseleave", function() {
+    leaved();
+});
+
+document.querySelector("#square3").addEventListener("mouseleave", function() {
+    leaved();
+});
+
